@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 
+import './Form.css'
+
 export default class Form extends Component {
     constructor(){
         super()
@@ -53,8 +55,8 @@ export default class Form extends Component {
                 </div>
 
                 <div className='Buttons'>
-                    <button onClick={this.handleCancel}>Cancel</button>
-                    <button>Add to Inventory</button>
+                    <button  className='Button' onClick={this.handleCancel}>Cancel</button>
+                    <button className='Button'>Add to Inventory</button>
                 </div>
                 
             </div>

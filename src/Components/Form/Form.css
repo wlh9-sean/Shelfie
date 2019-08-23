@@ -1,0 +1,20 @@
+.Form {
+    height: 400px;
+    width: 300px;
+    background: #3AD886;
+    float: right;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.Buttons {
+    display: flex;
+    justify-content: space-between
+}
+
+.Button {
+    background: #ED6B5A;
+}
