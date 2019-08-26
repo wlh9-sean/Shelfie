@@ -16,16 +16,18 @@ export default class App extends Component {
   }
 
   componentDidMount = () => {
-    axios.get('/api/inventory').then(res => {
+    axios.get('/api/inventory').then(response => {
       this.setState({
-        inventory: res.data
+        inventory: response.data
         
       })
     }).catch(err => console.log(err))
   }
 
+  
 
   render(){
+
     return(
       <div className='App'>
         <div>
@@ -33,7 +35,8 @@ export default class App extends Component {
         </div>
 
         <div>
-          <Form />
+          <Form 
+          getInventory={this.componentDidMount}/>
         </div>
 
         <div>

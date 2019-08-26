@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 
 import './Form.css'
+import axios from 'axios';
 
 export default class Form extends Component {
     constructor(){
@@ -30,6 +31,15 @@ export default class Form extends Component {
             price: 0,
             imgurl: ''
         })
+    }
+
+    createProduct = (req, res) => {
+        const {getInventory} = this.props
+        const {name, price, imgurl} = req.body
+
+        axios.post('/api/product', {name: name, price: price, img: imgurl}).then(res => {
+            getInventory()
+        }).catch(err => console.log(err))
     }
 
     render(){
